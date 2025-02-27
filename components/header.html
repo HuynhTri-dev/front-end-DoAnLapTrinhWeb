@@ -1,0 +1,106 @@
+<header
+  class="header container-fluid bg-light shadow-sm d-flex align-items-center justify-content-between"
+>
+  <div class="container d-flex justify-content-between align-items-center">
+    <!-- Logo -->
+    <div class="logo-container d-flex align-items-center gap-2">
+      <img
+        class="logo-img rounded-circle"
+        src="../assets/logo.png"
+        alt="logo"
+        width="50"
+        height="50"
+      />
+      <h1 class="fw-bold" style="color: var(--primary-color)">Risk Chance</h1>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <div class="d-lg-none">
+          <div class="menu-container dropdown w-100">
+            <button
+              class="menu-dropdown"
+              type="button"
+              id="mobileMenuButton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="mobileMenuButton">
+              <li>
+                <a class="dropdown-item fw-bold active" href="#">Home</a>
+              </li>
+              <li><a class="dropdown-item fw-bold" href="#">Startup</a></li>
+              <li><a class="dropdown-item fw-bold" href="#">News</a></li>
+              <li><a class="dropdown-item fw-bold" href="#">About</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Menu ngang cho desktop (màn hình lg trở lên) -->
+        <div class="d-none d-lg-block w-100">
+          <ul
+            class="navbar-nav d-flex flex-row gap-3 justify-content-center w-100"
+          >
+            <li class="nav-item">
+              <a class="nav-link fw-bold active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Startup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Tài khoản và các chức năng cần thiết -->
+    <div class="d-flex align-items-center justify-content-between p-2">
+      <!-- Danh sách icon chức năng -->
+      <div class="d-flex align-items-center gap-3">
+        <a href="#" class="text-dark position-relative">
+          <i class="fa-brands fa-signal-messenger fs-4"></i>
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            >3</span
+          >
+        </a>
+
+        <a href="#" class="text-dark position-relative">
+          <i class="fa-solid fa-bell fs-4"></i>
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            >5</span
+          >
+        </a>
+
+        <a href="#" class="text-dark d-none" id="postIcon">
+          <i class="fa-solid fa-pen fs-4"></i>
+        </a>
+      </div>
+
+      <div class="account-container">
+        <!-- @if (Context.Session.GetString("UserEmail") != null)
+          {
+              <img src="@Context.Session.GetString("UserAvatar")" alt="Avatar" class="rounded-circle" width="40" height="40">
+              <a href="/Account/Logout" class="btn btn-danger">Logout</a>
+          } -->
+        <!-- Sẽ get dữ liệu đăng nhập nếu có thì sẽ sign in vào -->
+
+        <a
+          class="signIn-btn text-white fw-bold btn btn-primary"
+          href="../page/login.html"
+        >
+          Sign In
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
