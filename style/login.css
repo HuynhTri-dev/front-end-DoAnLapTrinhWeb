@@ -6,7 +6,9 @@ body {
   background-color: var(--bg-light);
 }
 
-h3 {
+.forgot-password-box h3,
+.register-box h3,
+#login-content h3 {
   font-size: 28px;
 }
 

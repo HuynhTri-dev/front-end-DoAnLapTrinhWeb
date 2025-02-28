@@ -37,15 +37,76 @@
     <header class="sticky-top" id="header"></header>
 
     <main>
-      <!-- Rocket -->
+      <!-- Home Media -->
       <div class="rocket-container" id="rocket-container">
+        <h3 class="rocket-title text-white h3 fw-bold text-justify mb-4">
+          Welcome to Risk Chance
+        </h3>
+        <h4 class="rocket-desc text-white h4 fw-bold text-justify mb-3">
+          Stay ahead with the latest insights on technology, finance, and
+          startups.
+        </h4>
+
+        <h5 class="h5 rocket-desc text-white text-justify mb-3">
+          "Success favors those who dare to take risks. Are you ready for the
+          challenge?" – Huỳnh Minh Trí
+        </h5>
+
+        <button class="btn btn-primary fw-bold mb-3">Try Now</button>
+
+        <p class="rocket-desc text-white mb-3">Cooperators</p>
+        <ul
+          class="rocket-desc list-group d-flex flex-row justify-content-left gap-3"
+        >
+          <li class="d-flex align-items-center bg-transparent border-0">
+            <img
+              class="logo-cooperator me-2"
+              src="../assets/cooperators/ubs.png"
+              alt="UBS Group Logo"
+            />
+            <span class="text-white">UBS Group</span>
+          </li>
+
+          <li class="d-flex align-items-center bg-transparent border-0">
+            <img
+              class="logo-cooperator me-2"
+              src="../assets/cooperators/Allianz.png"
+              alt="Allianz Logo"
+            />
+            <span class="text-white">Allianz</span>
+          </li>
+
+          <li class="d-flex align-items-center bg-transparent border-0">
+            <img
+              class="logo-cooperator me-2"
+              src="../assets/cooperators/SSI.png"
+              alt="SSI Logo"
+            />
+            <span class="text-white">SSI</span>
+          </li>
+
+          <li class="d-flex align-items-center bg-transparent border-0">
+            <img
+              class="logo-cooperator me-2"
+              src="../assets/cooperators/TPS.png"
+              alt="TPS Logo"
+            />
+            <span class="text-white">TPS</span>
+          </li>
+        </ul>
+
         <img
           src="../assets/rocket.png"
           alt="Rocket"
-          class="rocket"
+          class="rocket d-none d-lg-block"
           id="rocket"
         />
-        <img src="../assets/fire.png" alt="fire" class="fire" id="fire" />
+        <img
+          src="../assets/fire.png"
+          alt="fire"
+          class="fire d-none d-lg-block"
+          id="fire"
+        />
       </div>
 
       <!-- Search Input -->
@@ -75,45 +136,92 @@
       </div>
 
       <!-- Startup nổi bật -->
-      <div class="startup-container container-fluid">
-        <h3 class="fw-bold text-white">High-potential startups</h3>
-        <section>
-          <div class="startup-box d-flex justify-content-center gap-3">
-            <!-- Cái này sẽ dò trên database để lấy ra -->
-            <div class="startup-item">
-              <img
-                src="https://picsum.photos/200/300"
-                alt="Startup 1"
-                class="startup-img"
-              />
-              <h4 class="text-center fw-bold">Startup 1</h4>
+      <div class="startup-container container-fluid py-4 mb-4">
+        <h3 class="h3 fw-bold text-white mb-4">High-potential startups</h3>
+        <section class="startup-section container-fluid">
+          <div
+            class="d-flex justify-content-center align-items-center container-fluid"
+          >
+            <!-- Nút Previous -->
+            <button
+              id="prevBtn"
+              class="btn btn-outline-light me-3 d-none d-lg-block"
+            >
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- Khung hiển thị startup -->
+            <div class="startup-box px-2 container" id="startup-box">
+              <div class="startup-list row d-flex justify-content-center gap-4">
+                <!-- Startup Item 1 -->
+                <div class="startup-item card col-12 col-sm-6 col-md-4">
+                  <img
+                    src="https://picsum.photos/300/200"
+                    alt="Startup 1"
+                    class="startup-img card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4 class="text-center fw-bold card-title">Startup 1</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                  </div>
+                </div>
+                <!-- Startup Item 2 -->
+                <div class="startup-item card col-12 col-sm-6 col-md-4">
+                  <img
+                    src="https://picsum.photos/300/200"
+                    alt="Startup 2"
+                    class="startup-img card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4 class="text-center fw-bold card-title">Startup 2</h4>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet. Quia reprehenderit fuga sint
+                      ea cum. Consequatur.
+                    </p>
+                  </div>
+                </div>
+                <!-- Startup Item 3 -->
+                <div class="startup-item card col-12 col-sm-6 col-md-4">
+                  <img
+                    src="https://picsum.photos/300/200"
+                    alt="Startup 3"
+                    class="startup-img card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4 class="text-center fw-bold card-title">Startup 3</h4>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet. Quia reprehenderit fuga sint
+                      ea cum. Consequatur.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="startup-item">
-              <img
-                src="https://picsum.photos/200/300"
-                alt="Startup 2"
-                class="startup-img"
-              />
-              <h4 class="text-center fw-bold">Startup 2</h4>
-            </div>
-            <div class="startup-item">
-              <img
-                src="https://picsum.photos/200/300"
-                alt="Startup 3"
-                class="startup-img"
-              />
-              <h4 class="text-center fw-bold">Startup 3</h4>
-            </div>
+
+            <!-- Nút Next -->
+            <button
+              id="nextBtn"
+              class="btn btn-outline-light ms-3 d-none d-lg-block"
+            >
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <!-- Nút Xem Thêm (Mobile) -->
+          <div class="text-center mt-3">
+            <button id="seeMoreBtn" class="btn btn-success d-md-none">
+              Xem thêm
+            </button>
           </div>
         </section>
       </div>
+
       <!-- News -->
       <div class="news-container container"></div>
     </main>
 
     <footer id="footer"></footer>
   </body>
-
   <script src="../utils/LoadHeaderFooter.js"></script>
   <script src="../utils/AnimationHome.js"></script>
 </html>

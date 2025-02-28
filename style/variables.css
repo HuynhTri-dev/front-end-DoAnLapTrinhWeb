@@ -51,3 +51,12 @@ h3 {
 a {
   color: black !important;
 }
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
