@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Boostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="../style/layout.css" />
+    <link rel="stylesheet" href="../style/startup.css" />
+
+    <title>Startup - Risk Chance</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header"></header>
+    <!-- Popup Messenger -->
+    <div id="messenger"></div>
+
+    <main class="main-container row mt-4 mb-4 mx-auto">
+      <!-- Startup -->
+      <div class="startup-container col-md-8">
+        <!-- Create poster startup -->
+        <!-- Chỉ có startup mới hiện khung này -->
+        <div
+          class="post-container mt-3 mb-3 d-flex justify-content-center align-items-center"
+        >
+          <div
+            class="post-box d-flex justify-content-between align-items-center"
+          >
+            <a href="#" class="text-decoration-none">
+              <div
+                class="user-info d-flex justify-content-center align-items-center"
+              >
+                <img
+                  src="../assets/user/image.png"
+                  alt="anh dai dien"
+                  class="user-image rounded-circle"
+                />
+                <p class="d-none d-lg-block">Name</p>
+              </div>
+            </a>
+
+            <button type="button" class="btn btn-primary fw-bold">
+              <p>Create Startup</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Outstanding startup -->
+        <div class="outstanding-startups-container mt-4 mb-4">
+          <h3 class="h3 mb-3 fw-bold">Outstanding Startups</h3>
+          <section class="outstanding-list row">
+            <a
+              href="#"
+              class="info-link col-md-6 mb-3 text-decoration-none mx-auto"
+            >
+              <div
+                class="startup-card text-white"
+                style="
+                  background-image: linear-gradient(
+                      rgba(0, 0, 0, 0.5),
+                      rgba(0, 0, 0, 0.5)
+                    ),
+                    url('https://picsum.photos/300/200');
+                "
+              >
+                <h5 class="fw-bold">Name</h5>
+                <p class="line-clamp-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequatur nemo voluptates dolor quas in voluptatibus omnis
+                  assumenda modi? Inventore veritatis culpa corrupti, a
+                  consequuntur excepturi eum fuga ea quidem alias. Tenetur unde
+                  assumenda accusantium illo repudiandae necessitatibus
+                  molestias tempore sequi, numquam totam quos voluptatum nisi
+                  itaque adipisci fugit quod ipsam doloremque? Animi incidunt
+                  doloribus consectetur voluptate eos. Porro, vitae esse.
+                </p>
+              </div>
+            </a>
+
+            <a
+              href="#"
+              class="info-link col-md-6 mb-3 text-decoration-none mx-auto"
+            >
+              <div
+                class="startup-card text-white"
+                style="
+                  background-image: linear-gradient(
+                      rgba(0, 0, 0, 0.5),
+                      rgba(0, 0, 0, 0.5)
+                    ),
+                    url('https://picsum.photos/300/200');
+                "
+              >
+                <h5 class="fw-bold">Name</h5>
+                <p class="line-clamp-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequatur nemo voluptates dolor quas in voluptatibus omnis
+                  assumenda modi? Inventore veritatis culpa corrupti, a
+                  consequuntur excepturi eum fuga ea quidem alias. Tenetur unde
+                  assumenda accusantium illo repudiandae necessitatibus
+                  molestias tempore sequi, numquam totam quos voluptatum nisi
+                  itaque adipisci fugit quod ipsam doloremque? Animi incidunt
+                  doloribus consectetur voluptate eos. Porro, vitae esse.
+                </p>
+              </div>
+            </a>
+
+            <a
+              href="#"
+              class="info-link col-md-6 mb-3 text-decoration-none mx-auto"
+            >
+              <div
+                class="startup-card text-white"
+                style="
+                  background-image: linear-gradient(
+                      rgba(0, 0, 0, 0.5),
+                      rgba(0, 0, 0, 0.5)
+                    ),
+                    url('https://picsum.photos/300/200');
+                "
+              >
+                <h5 class="fw-bold">Name</h5>
+                <p class="line-clamp-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequatur nemo voluptates dolor quas in voluptatibus omnis
+                  assumenda modi? Inventore veritatis culpa corrupti, a
+                  consequuntur excepturi eum fuga ea quidem alias. Tenetur unde
+                  assumenda accusantium illo repudiandae necessitatibus
+                  molestias tempore sequi, numquam totam quos voluptatum nisi
+                  itaque adipisci fugit quod ipsam doloremque? Animi incidunt
+                  doloribus consectetur voluptate eos. Porro, vitae esse.
+                </p>
+              </div>
+            </a>
+
+            <a
+              href="#"
+              class="info-link col-md-6 mb-3 text-decoration-none mx-auto"
+            >
+              <div
+                class="startup-card text-white"
+                style="
+                  background-image: linear-gradient(
+                      rgba(0, 0, 0, 0.5),
+                      rgba(0, 0, 0, 0.5)
+                    ),
+                    url('https://picsum.photos/300/200');
+                "
+              >
+                <h5 class="fw-bold">Name</h5>
+                <p class="line-clamp-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequatur nemo voluptates dolor quas in voluptatibus omnis
+                  assumenda modi? Inventore veritatis culpa corrupti, a
+                  consequuntur excepturi eum fuga ea quidem alias. Tenetur unde
+                  assumenda accusantium illo repudiandae necessitatibus
+                  molestias tempore sequi, numquam totam quos voluptatum nisi
+                  itaque adipisci fugit quod ipsam doloremque? Animi incidunt
+                  doloribus consectetur voluptate eos. Porro, vitae esse.
+                </p>
+              </div>
+            </a>
+          </section>
+        </div>
+
+        <!-- Search -->
+        <div
+          class="search-container container d-flex justify-content-center mt-4 mb-4"
+        >
+          <div class="search-box position-relative">
+            <input
+              type="text"
+              class="form-control search-input"
+              placeholder="Tên startup bạn cần tìm"
+            />
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </div>
+        </div>
+
+        <!-- Startup list -->
+        <div class="startup-list-container mt-4 mb-4">
+          <h3 class="h3 mb-3 fw-bold">Startup List</h3>
+          <section class="startup-list row g-3">
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="startup-card">
+                <img
+                  class="startup-image"
+                  src="../assets/rocket.png"
+                  alt="anh minh hoa"
+                />
+
+                <div class="startup-info">
+                  <h5 class="fw-bold">Startup A</h5>
+                  <p class="text-muted mb-2">Công nghệ AI</p>
+                  <button
+                    class="btn btn-outline-primary btn-sm fw-bold"
+                    onclick="showDetails()"
+                  >
+                    Read more
+                  </button>
+
+                  <button class="btn btn-outline-success btn-sm fw-bold">
+                    Invest
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="startup-card">
+                <img
+                  class="startup-image"
+                  src="../assets/rocket.png"
+                  alt="anh minh hoa"
+                />
+
+                <div class="startup-info">
+                  <h5 class="fw-bold">Startup A</h5>
+                  <p class="text-muted mb-2">Công nghệ AI</p>
+                  <button
+                    class="btn btn-outline-primary btn-sm fw-bold"
+                    onclick="showDetails()"
+                  >
+                    Read more
+                  </button>
+
+                  <button class="btn btn-outline-success btn-sm fw-bold">
+                    Invest
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="startup-card">
+                <img
+                  class="startup-image"
+                  src="../assets/rocket.png"
+                  alt="anh minh hoa"
+                />
+
+                <div class="startup-info">
+                  <h5 class="fw-bold">Startup A</h5>
+                  <p class="text-muted mb-2">Công nghệ AI</p>
+                  <button
+                    class="btn btn-outline-primary btn-sm fw-bold"
+                    onclick="showDetails()"
+                  >
+                    Read more
+                  </button>
+
+                  <button class="btn btn-outline-success btn-sm fw-bold">
+                    Invest
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="startup-card">
+                <img
+                  class="startup-image"
+                  src="../assets/rocket.png"
+                  alt="anh minh hoa"
+                />
+
+                <div class="startup-info">
+                  <h5 class="fw-bold">Startup A</h5>
+                  <p class="text-muted mb-2">Công nghệ AI</p>
+                  <button
+                    class="btn btn-outline-primary btn-sm fw-bold"
+                    onclick="showDetails()"
+                  >
+                    Read more
+                  </button>
+
+                  <button class="btn btn-outline-success btn-sm fw-bold">
+                    Invest
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="startup-card">
+                <img
+                  class="startup-image"
+                  src="../assets/rocket.png"
+                  alt="anh minh hoa"
+                />
+
+                <div class="startup-info">
+                  <h5 class="fw-bold">Startup A</h5>
+                  <p class="text-muted mb-2">Công nghệ AI</p>
+                  <button
+                    class="btn btn-outline-primary btn-sm fw-bold"
+                    onclick="showDetails()"
+                  >
+                    Read more
+                  </button>
+
+                  <button class="btn btn-outline-success btn-sm fw-bold">
+                    Invest
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Loading more -->
+
+            <div id="load-more-trigger" class="text-center mt-3">
+              <div class="spinner-border"></div>
+            </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- Sidebar -->
+      <aside class="sidebar-container col-md-4">
+        <!-- Các lĩnh vực top đầu -->
+        <div class="top-fields-container mx-auto">
+          <h4 class="h4 mb-3 fw-bold">Top Fields</h4>
+          <section class="top-fields-list">
+            <a href="#" class="field-link text-decoration-none">
+              <div class="field-card d-flex justify-content-between">
+                <h5 class="fw-bold">Công nghệ AI</h5>
+                <p class="text-muted d-block d-md-none d-lg-none d-xl-block">100 startups</p>
+              </div>
+            </a>
+
+            <a href="#" class="field-link text-decoration-none">
+              <div class="field-card d-flex justify-content-between">
+                <h5 class="fw-bold">Công nghệ AI</h5>
+                <p class="text-muted d-md-none d-lg-none d-xl-block">100 startups</p>
+              </div>
+            </a>
+          </section>
+        </div>
+
+        <!-- Top investor -->
+        <div class="top-investors-container mb-4 mt-4 mx-auto">
+          <h4 class="h4 fw-bold">Top Investors</h4>
+          <section class="top-investor-list">
+            <a
+              href="#"
+              class="user-link text-decoration-none d-flex align-items-center justify-content-between"
+            >
+              <div
+                class="user-container d-flex justify-content-center align-items-center"
+              >
+                <img
+                  class="user-image rounded-circle"
+                  src="../assets/user/image.png"
+                  alt="user img"
+                />
+                <p>Name</p>
+              </div>
+
+              <div class="d-md-none d-lg-none d-xl-block">
+                <p>Number of projects: 5</p>
+                <p>Profit: 100.000.000 VND</p>
+              </div>
+            </a>
+
+            <a
+              href="#"
+              class="user-link text-decoration-none d-flex align-items-center justify-content-between"
+            >
+              <div
+                class="user-container d-flex justify-content-center align-items-center"
+              >
+                <img
+                  class="user-image rounded-circle"
+                  src="../assets/user/image.png"
+                  alt="user img"
+                />
+                <p>Name</p>
+              </div>
+
+              <div class="d-md-none d-lg-none d-xl-block">
+                <p>Number of projects: 5</p>
+                <p>Profit: 100.000.000 VND</p>
+              </div>
+            </a>
+          </section>
+        </div>
+
+        <!-- detail -->
+        <div id="detailStartup"></div>
+      </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+  </body>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../utils/LoadHeaderFooter.js"></script>
+  <script src="../utils/AnimationDetail.js"></script>
+</html>

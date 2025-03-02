@@ -8,3 +8,4 @@ function loadComponent(id, file) {
 loadComponent("header", "../components/header.html");
 loadComponent("footer", "../components/footer.html");
 loadComponent("messenger", "../components/messenger.html");
+loadComponent("detailStartup", "../components/detailBox.html");

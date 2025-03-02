@@ -3,15 +3,20 @@
 >
   <div class="container d-flex justify-content-between align-items-center">
     <!-- Logo -->
-    <div class="logo-container d-flex align-items-center gap-2">
-      <img
-        class="logo-img rounded-circle"
-        src="../assets/logo.png"
-        alt="logo"
-        width="50"
-        height="50"
-      />
-      <h1 class="fw-bold" style="color: var(--primary-color)">Risk Chance</h1>
+    <div class="logo-container">
+      <a
+        href="../page/home.html"
+        class="text-decoration-none d-flex align-items-center gap-2"
+      >
+        <img
+          class="logo-img rounded-circle"
+          src="../assets/logo.png"
+          alt="logo"
+          width="50"
+          height="50"
+        />
+        <h1 class="fw-bold" style="color: var(--primary-color)">Risk Chance</h1>
+      </a>
     </div>
 
     <!-- Navigation -->
@@ -20,20 +25,30 @@
         <div class="d-lg-none">
           <div class="menu-container dropdown w-100">
             <button
-              class="menu-dropdown"
+              class="menu-dropdown d-flex"
               type="button"
               id="mobileMenuButton"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="fa-solid fa-bars"></i>
+              <i class="fa-solid fa-house"></i>
             </button>
             <ul class="dropdown-menu" aria-labelledby="mobileMenuButton">
               <li>
-                <a class="dropdown-item fw-bold active" href="#">Home</a>
+                <a class="dropdown-item fw-bold active" href="../page/home.html"
+                  >Home</a
+                >
               </li>
-              <li><a class="dropdown-item fw-bold" href="#">Startup</a></li>
-              <li><a class="dropdown-item fw-bold" href="#">News</a></li>
+              <li>
+                <a class="dropdown-item fw-bold" href="../page/startup.html"
+                  >Startup</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item fw-bold" href="../page/news.html"
+                  >News</a
+                >
+              </li>
               <li><a class="dropdown-item fw-bold" href="#about">About</a></li>
             </ul>
           </div>
@@ -45,13 +60,17 @@
             class="navbar-nav d-flex flex-row gap-3 justify-content-center w-100"
           >
             <li class="nav-item">
-              <a class="nav-link fw-bold active" href="#">Home</a>
+              <a class="nav-link fw-bold active" href="../page/home.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold" href="#">Startup</a>
+              <a class="nav-link fw-bold" href="../page/startup.html"
+                >Startup</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold" href="#">News</a>
+              <a class="nav-link fw-bold" href="../page/news.html">News</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fw-bold" href="#about">About</a>
@@ -63,9 +82,67 @@
 
     <!-- Tài khoản và các chức năng cần thiết -->
     <div class="d-flex align-items-center justify-content-between p-2">
-      <!-- Danh sách icon chức năng -->
-      <div class="d-flex align-items-center gap-3">
-        <!-- Nút mở popup Messenger -->
+      <!-- Dropdown menu khi thu nhỏ -->
+      <div class="dropdown d-lg-none">
+        <button
+          class="btn btn-primary text-light d-flex align-center"
+          type="button"
+          id="menuDropdown"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars fs-4"></i>
+        </button>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="menuDropdown"
+        >
+          <li>
+            <button
+              type="button"
+              class="dropdown-item text-dark position-relative"
+              data-bs-toggle="modal"
+              data-bs-target="#messengerModal"
+            >
+              <i class="fa-brands fa-signal-messenger"></i> Messenger
+              <span
+                id="msgBadge"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"
+              ></span>
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="dropdown-item text-dark position-relative"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-bell"></i> Notifications
+              <span
+                id="notifBadge"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"
+              ></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" id="notifDropdown">
+              <li><h5 class="h5 fw-bold">Thông báo</h5></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item text-dark">
+              <i class="fa-solid fa-pen"></i> Create Post
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item">
+              <i class="fa-solid fa-chart-line"></i> Dashboard
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Các icon chỉ hiện trên màn hình lớn -->
+      <div class="d-none d-lg-flex align-items-center gap-3">
         <button
           type="button"
           class="text-dark position-relative btn btn-light"
@@ -79,7 +156,6 @@
           ></span>
         </button>
 
-        <!-- Notifications -->
         <div class="notification dropdown">
           <button
             type="button"
@@ -95,29 +171,21 @@
           </button>
           <ul class="dropdown-menu dropdown-menu-end" id="notifDropdown">
             <li><h5 class="h5 fw-bold">Thông báo</h5></li>
-            <!-- Dùng foreach lấy nội dung thông báo tưng ứng với id người dùng ra -->
           </ul>
         </div>
 
-        <!-- Post Button (Hidden by default) -->
         <button href="#" class="text-dark btn btn-light" id="postIcon">
           <i class="fa-solid fa-pen fs-4"></i>
         </button>
 
-        <!-- Dashboard Button -->
         <button class="btn btn-primary fw-bold">Dashboard</button>
       </div>
 
-      <div class="account-container">
-        <!-- @if (Context.Session.GetString("UserEmail") != null)
-          {
-              <img src="@Context.Session.GetString("UserAvatar")" alt="Avatar" class="rounded-circle" width="40" height="40">
-              <a href="/Account/Logout" class="btn btn-danger">Logout</a>
-          } -->
-        <!-- Sẽ get dữ liệu đăng nhập nếu có thì sẽ sign in vào -->
-
+      <div
+        class="account-container d-flex align-items-center justify-content-center"
+      >
         <a
-          class="signIn-btn text-white fw-bold btn btn-primary"
+          class="signIn-btn text-white fw-bold btn btn-primary d-flex align-items-center justify-content-center"
           href="../page/login.html"
         >
           Sign In
