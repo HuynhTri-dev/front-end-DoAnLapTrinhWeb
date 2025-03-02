@@ -92,6 +92,11 @@
   margin-left: 20px;
 }
 
+.notification .dropdown-menu {
+  width: 500px;
+  padding: 20px;
+}
+
 /* !Footer */
 footer {
   background-color: var(--background-dark);
@@ -106,7 +111,6 @@ footer h5 {
 footer p,
 footer a {
   font-size: 16px;
-  line-height: 1.5;
 }
 
 footer a:hover {

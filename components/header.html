@@ -65,25 +65,47 @@
     <div class="d-flex align-items-center justify-content-between p-2">
       <!-- Danh sách icon chức năng -->
       <div class="d-flex align-items-center gap-3">
-        <a href="#" class="text-dark position-relative">
+        <!-- Nút mở popup Messenger -->
+        <button
+          type="button"
+          class="text-dark position-relative btn btn-light"
+          data-bs-toggle="modal"
+          data-bs-target="#messengerModal"
+        >
           <i class="fa-brands fa-signal-messenger fs-4"></i>
           <span
-            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-            >3</span
-          >
-        </a>
+            id="msgBadge"
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"
+          ></span>
+        </button>
 
-        <a href="#" class="text-dark position-relative">
-          <i class="fa-solid fa-bell fs-4"></i>
-          <span
-            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-            >5</span
+        <!-- Notifications -->
+        <div class="notification dropdown">
+          <button
+            type="button"
+            class="text-dark position-relative btn btn-light"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
           >
-        </a>
+            <i class="fa-solid fa-bell fs-4"></i>
+            <span
+              id="notifBadge"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger d-none"
+            ></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" id="notifDropdown">
+            <li><h5 class="h5 fw-bold">Thông báo</h5></li>
+            <!-- Dùng foreach lấy nội dung thông báo tưng ứng với id người dùng ra -->
+          </ul>
+        </div>
 
-        <a href="#" class="text-dark d-none" id="postIcon">
+        <!-- Post Button (Hidden by default) -->
+        <button href="#" class="text-dark btn btn-light" id="postIcon">
           <i class="fa-solid fa-pen fs-4"></i>
-        </a>
+        </button>
+
+        <!-- Dashboard Button -->
+        <button class="btn btn-primary fw-bold">Dashboard</button>
       </div>
 
       <div class="account-container">

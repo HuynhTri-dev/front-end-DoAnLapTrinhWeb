@@ -7,3 +7,4 @@ function loadComponent(id, file) {
 // Gọi hàm để tải header và footer
 loadComponent("header", "../components/header.html");
 loadComponent("footer", "../components/footer.html");
+loadComponent("messenger", "../components/messenger.html");

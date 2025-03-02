@@ -20,6 +20,7 @@
 
   /* Text Colors */
   --text-color: #212529;
+  --text-blue-dark: #005792;
   --text-light: #ffff;
 
   /* Border and Shadow */
@@ -40,6 +41,7 @@
 
 body {
   font-family: var(--font-primary);
+  line-height: 1.5;
 }
 
 h1,
@@ -55,8 +57,46 @@ a {
 .btn-primary {
   background-color: var(--primary-color);
   color: var(--text-light);
+  border: none;
 }
 
 .btn-primary:hover {
   background-color: var(--primary-hover);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: var(--text-light);
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: var(--secondary-hover);
+}
+
+.text-justify {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Giới hạn tối đa 2 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-light {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-light:hover {
+  background-color: var(--primary-color);
 }
