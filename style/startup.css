@@ -1,8 +1,8 @@
-main {
+/* main {
   background-color: var(--background-color);
   border-radius: 10px;
   box-shadow: 5px 5px 20px 3px var(--shadow-dark);
-}
+} */
 
 .main-container {
   width: 95%;
@@ -33,6 +33,9 @@ main {
 }
 /* 
 Outstanding startup */
+.outstanding-list {
+  width: 80%;
+}
 .startup-card {
   padding: 10px;
   border-radius: 8px;
@@ -43,7 +46,7 @@ Outstanding startup */
 }
 
 .info-link {
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .outstanding-list .info-link:hover {
