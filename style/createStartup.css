@@ -1,1 +1,27 @@
 /* Hien thi anh */
+#logoPreview {
+  width: 50%;
+}
+
+.submit-btn i {
+  transform: translate(-5px, 5px);
+  transition: transform 0.3s ease-in-out, margin-right 0.3s ease-in-out;
+}
+
+.submit-btn:hover i {
+  transform: translate(5px, -5px);
+  margin-right: 5px;
+}
+
+#nextStep i,
+#prevStep i {
+  transition: transform 0.3s ease-in-out;
+}
+
+#nextStep:hover i {
+  transform: translateX(5px);
+}
+
+#prevStep:hover i {
+  transform: translateX(-5px);
+}
