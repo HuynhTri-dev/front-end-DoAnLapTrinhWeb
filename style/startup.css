@@ -177,3 +177,18 @@ Outstanding startup */
   width: 100%;
   padding: 10px;
 }
+
+.description-container {
+  width: 95%;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #f9f9f9;
+}
+
+.description-container::-webkit-scrollbar {
+  width: 5px;
+}

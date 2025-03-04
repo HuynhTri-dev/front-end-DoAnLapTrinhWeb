@@ -2,13 +2,24 @@ $(window).on("scroll", function () {
   let scrollPosition = $(window).scrollTop();
   let opacity = Math.max(0, 1 - scrollPosition / 500);
 
+  let maxMoveX = $(window).width() - $("#rocket").width();
+  let maxMoveY = $(window).height() - $("#rocket").height();
+
+  let moveX = Math.min(scrollPosition / 5, maxMoveX);
+  let moveY = Math.min(-scrollPosition / 5, maxMoveY);
+
+  // Điều kiện dừng: khi `scrollPosition` đạt 1000px
+  if (scrollPosition >= 500) {
+    return;
+  }
+
   $("#rocket").css({
-    transform: `translate(${scrollPosition / 5}px, ${-scrollPosition / 5}px)`,
+    transform: `translate(${moveX}px, ${moveY}px)`,
   });
 
   $("#fire").css({
     opacity: opacity,
-    transform: `translate(${scrollPosition / 5}px, ${-scrollPosition / 5}px)`,
+    transform: `translate(${moveX}px, ${moveY}px)`,
   });
 });
 

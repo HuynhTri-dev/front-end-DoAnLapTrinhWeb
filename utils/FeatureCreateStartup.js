@@ -1,15 +1,18 @@
 $(document).ready(function () {
   $("#step-2").hide();
+  $("#review-container").hide();
 
   // Next Step
   $("#nextStep").click(function () {
     $("#step-1").hide();
     $("#step-2").fadeIn();
+    $("#review-container").fadeIn();
   });
 
   // Previous Step
   $("#prevStep").click(function () {
     $("#step-2").hide();
+    $("#review-container").hide();
     $("#step-1").fadeIn();
   });
 

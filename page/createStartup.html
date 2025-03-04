@@ -33,10 +33,11 @@
     <div id="messenger"></div>
 
     <main>
-      <div class="container py-5">
+      <div class="create-container py-5 mx-auto">
         <div class="row justify-content-center">
-          <div class="col-lg-8">
+          <div class="col-lg-6 mb-4">
             <div class="card shadow-lg p-4">
+              <!-- Step 1: Information startup -->
               <div id="step-1">
                 <h2 class="h2 text-center fw-bold mb-4">Create Your Startup</h2>
 
@@ -127,17 +128,28 @@
                     </div>
                   </div>
 
-                  <!-- Submission Button -->
+                  <!-- Save Button -->
                   <div class="text-center mt-4">
                     <button
                       type="button"
-                      class="btn btn-primary fw-bold"
-                      id="nextStep"
+                      class="btn btn-success fw-bold"
+                      id="save"
                     >
-                      Next <i class="fa-solid fa-arrow-right"></i>
+                      <i class="fa-solid fa-floppy-disk"></i> Save
                     </button>
                   </div>
                 </form>
+
+                <!-- Next -->
+                <div class="text-center mt-4">
+                  <button
+                    type="button"
+                    class="btn btn-primary fw-bold"
+                    id="nextStep"
+                  >
+                    Next <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
               </div>
 
               <!-- Step 2: Upload Documents -->
@@ -145,6 +157,7 @@
                 <form id="documentForm">
                   <h2 class="h2 text-center fw-bold mb-4">Upload Documents</h2>
 
+                  <!-- Name doc -->
                   <div class="mb-3">
                     <label class="form-label fw-bold">Document Name</label>
                     <input
@@ -155,15 +168,26 @@
                     />
                   </div>
 
+                  <!-- Business Document Type -->
                   <div class="mb-3">
-                    <label class="form-label fw-bold">Document Type</label>
+                    <label class="form-label fw-bold"
+                      >Business Document Type</label
+                    >
                     <select class="form-select" id="documentType">
-                      <option value="PNG">PNG</option>
-                      <option value="PDF">PDF</option>
-                      <option value="DOC">DOC</option>
+                      <option value="Business License">Business License</option>
+                      <option value="Tax Registration">Tax Registration</option>
+                      <option value="Financial Report">Financial Report</option>
+                      <option value="Contract Agreement">
+                        Contract Agreement
+                      </option>
+                      <option value="Investment Proposal">
+                        Investment Proposal
+                      </option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
 
+                  <!-- Content -->
                   <div class="mb-3">
                     <label class="form-label fw-bold">Document Content</label>
                     <textarea
@@ -174,6 +198,7 @@
                     ></textarea>
                   </div>
 
+                  <!-- Upload file -->
                   <div class="mb-3">
                     <label class="form-label fw-bold">Upload File</label>
                     <input
@@ -188,22 +213,79 @@
                   <div class="text-center mt-4">
                     <button
                       type="button"
-                      class="btn btn-secondary fw-bold"
-                      id="prevStep"
+                      class="btn btn-success fw-bold"
+                      id="addDocument"
                     >
-                      <i class="fa-solid fa-arrow-left"></i> Back
-                    </button>
-
-                    <button
-                      id="createStartup"
-                      type="submit"
-                      class="submit-btn btn btn-primary fw-bold"
-                    >
-                      <i class="fa-solid fa-rocket"></i> Create Startup
+                      <i class="fa-solid fa-plus"></i> Add
                     </button>
                   </div>
                 </form>
+                <div class="text-center mt-4">
+                  <button
+                    type="button"
+                    class="btn btn-secondary fw-bold"
+                    id="prevStep"
+                  >
+                    <i class="fa-solid fa-arrow-left"></i> Back
+                  </button>
+
+                  <button
+                    id="createStartup"
+                    type="submit"
+                    class="submit-btn btn btn-primary fw-bold"
+                  >
+                    <i class="fa-solid fa-rocket"></i> Create Startup
+                  </button>
+                </div>
               </div>
+            </div>
+          </div>
+
+          <!-- Review container -->
+          <div id="review-container" class="col-lg-6">
+            <!-- Review -->
+            <div
+              id="statup-info"
+              class="startup-info container card shadow-lg p-2 mb-4"
+            >
+              <div
+                class="d-flex justify-content-center align-items-center mb-2"
+              >
+                <img
+                  class="logo-img rounded-circle"
+                  src="../assets/logo.png"
+                  alt="logo startup"
+                />
+                <p class="name fw-bold">Name startup</p>
+              </div>
+              <p>Business:</p>
+              <p>Funding Goal:</p>
+            </div>
+
+            <!-- Document List -->
+            <div class="document-list-container">
+              <h3 class="h3 text-center fw-bold">Document List</h3>
+              <table class="table table-striped">
+                <thead class="fw-bold">
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>File</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                  </tr>
+                  <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>

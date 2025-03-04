@@ -181,12 +181,18 @@
   padding: 40px;
 }
 
+.startup-box {
+  width: 100%;
+}
+
+.startup-box button {
+  font-size: 16px;
+}
+
 .startup-item {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   padding: 0px;
-  width: 30%;
-  min-width: 250px;
-  max-width: 275px;
+  width: 32%;
   border-radius: 20px;
   border: none;
 }
@@ -200,12 +206,6 @@
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-}
-
-.card-body {
-  background-color: #f8f9fa;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 #prevBtn,
