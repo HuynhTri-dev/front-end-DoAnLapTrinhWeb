@@ -1,0 +1,24 @@
+/* Avatar */
+#profileImage {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* Menu */
+.menu-container .nav-link {
+  width: 100%;
+  color: var(--primary-hover) !important;
+}
+
+.menu-container .nav-link:hover {
+  color: var(--primary-hover) !important;
+  border: 2px solid var(--primary-hover);
+}
+
+.menu-container .nav-link.active-feature {
+  background-color: var(--primary-hover);
+  color: var(--text-light) !important;
+  font-weight: bold;
+}

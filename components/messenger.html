@@ -3,6 +3,9 @@
   class="modal fade"
   id="messengerModal"
   aria-labelledby="messengerModalLabel"
+  data-bs-backdrop="false"
+  data-bs-keyboard="false"
+  tabindex="-1"
 >
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -16,9 +19,57 @@
         ></button>
       </div>
       <div class="modal-body">
-        <ul class="list-group" id="msgList">
-          <!-- Tin nhắn sẽ được thêm bằng JavaScript -->
-        </ul>
+        <div class="row">
+          <!-- Danh sách người dùng -->
+          <div class="col-sm-3 border-end">
+            <input
+              type="text"
+              class="form-control mb-2"
+              id="searchUser"
+              placeholder="Tìm kiếm..."
+            />
+            <ul class="nav flex-column" id="userList">
+              <li class="nav-item">
+                <button class="nav-link"><p>Name user</p></button>
+              </li>
+            </ul>
+          </div>
+          <!-- Tin nhắn -->
+          <div class="col-sm-9 d-flex flex-column">
+            <!-- Thông tin người nhận -->
+            <div
+              class="receiver-info d-flex align-items-center p-2 border-bottom"
+            >
+              <img
+                class="rounded-circle"
+                width="30px"
+                height="30px"
+                src="../assets/user/image.png"
+                alt="User"
+              />
+              <p class="ms-2 mb-0" id="receiverName">Chọn người để chat</p>
+            </div>
+            <!-- Nội dung chat -->
+            <div
+              class="mess-container flex-grow-1 p-2 overflow-auto"
+              id="chatBox"
+            >
+              <p class="text-muted">Chưa có tin nhắn</p>
+            </div>
+            <!-- Ô nhập tin nhắn -->
+            <div class="p-2 border-top">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="messageInput"
+                  placeholder="Nhập tin nhắn..."
+                />
+                <button class="btn btn-primary" id="sendMessageBtn">Gửi</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
@@ -28,3 +79,6 @@
     </div>
   </div>
 </div>
+
+<link rel="stylesheet" href="../style/messenger.css" />
+<script src="../utils/FeatureMessenger.js"></script>

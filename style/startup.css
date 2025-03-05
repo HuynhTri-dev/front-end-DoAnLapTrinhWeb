@@ -140,7 +140,7 @@ Outstanding startup */
 /* detail */
 .startup-sidebar {
   position: fixed;
-  top: 50px;
+  top: 100px;
   right: -500px; /* Ẩn ban đầu */
   width: 30%;
   min-width: 300px;
