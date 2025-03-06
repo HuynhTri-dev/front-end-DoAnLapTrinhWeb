@@ -26,10 +26,9 @@
 
 /* Dashboard */
 /* Founder */
-.startup-info-box {
+.box {
   border-radius: 10px;
   box-shadow: 2px 2px 5px 2px var(--shadow-light);
-  padding: 5px;
 }
 
 .logo-name-box .logo {
@@ -38,4 +37,39 @@
   object-fit: contain;
   margin-right: 10px;
   border: 1px solid var(--border-color);
+}
+
+.desc-box {
+  height: fit-content;
+  max-height: 75px;
+  overflow: auto;
+}
+
+.desc-box::-webkit-scrollbar {
+  width: 0px;
+}
+
+.doc-list {
+  height: fit-content;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.doc-list::-webkit-scrollbar {
+  width: 0px;
+}
+
+.doc-item {
+  height: 40px;
+  padding: 5px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.doc-item:hover {
+  background-color: var(--border-color);
+}
+
+/* Investor */
+.ex-pro-box {
+  color: var(--secondary-hover);
 }

@@ -39,7 +39,7 @@
 
     <main class="container row mx-auto mt-4">
       <!-- Menu -->
-      <div class="col-md-3">
+      <div class="col-md-2">
         <div class="menu-container card">
           <nav>
             <ul class="nav flex-column">
@@ -58,7 +58,7 @@
                 >
                   <i class="fa-solid fa-address-card"></i>
                   <p style="margin-left: 5px" class="d-none d-md-block">
-                    Personal Profile
+                    Profile
                   </p>
                 </button>
               </li>
@@ -97,9 +97,9 @@
         </div>
       </div>
       <!-- Hien thi -->
-      <div class="col-md-9">
+      <div class="col-md-10 mx-auto">
         <!-- Profile -->
-        <div class="profile-container container-fluid mb-4">
+        <div class="profile-container container-fluid mb-4 mx-auto">
           <h2 class="h2 text-center fw-bold mb-3">Personal Profile</h2>
           <div class="d-flex justify-content-center align-items-center">
             <img
@@ -125,17 +125,17 @@
               <input type="email" id="email" class="form-control" />
             </div>
             <div class="mb-3">
-              <label for="phone" class="form-label">Số điện thoại:</label>
+              <label for="phone" class="form-label">Phone Number:</label>
               <input type="text" id="phone" class="form-control" />
             </div>
             <div class="mb-3">
-              <label class="form-label">Loại tài khoản:</label>
+              <label class="form-label">Role Account:</label>
               <input type="text" id="role" class="form-control" disabled />
             </div>
             <div class="d-flex justify-content-around align-items-center">
-              <button class="btn btn-primary">Update</button>
+              <button class="btn btn-primary fw-bold">Update</button>
               <button
-                class="btn btn-danger"
+                class="btn btn-danger fw-bold"
                 data-bs-toggle="modal"
                 data-bs-target="#changePasswordModal"
               >
@@ -147,13 +147,15 @@
 
         <!-- Dashboard -->
         <!-- Founder -->
-        <div class="founder-dashboard-container container-fluid mb-4 row">
-          <!-- Startup -->
-          <div class="startup-box col-md-6">
+        <div
+          class="founder-dashboard-container container-fluid mb-4 row mx-auto"
+        >
+          <!-- Startup Information -->
+          <div class="startup-box col-md-5 mx-auto">
             <!-- Thong tin -->
-            <div class="startup-info-box container-fluid p-2">
+            <div class="startup-info-box box container-fluid p-3 mb-3 mx-auto">
               <div
-                class="logo-name-box d-flex justify-content-center align-items-center"
+                class="logo-name-box d-flex justify-content-center align-items-center mb-2"
               >
                 <img
                   class="logo rounded-circle"
@@ -162,8 +164,10 @@
                 />
                 <h5 class="h5 fw-bold">House Manage</h5>
               </div>
-
-              <div class="desc-box">
+              <hr />
+              <p><span class="fw-bold">Business:</span> Service</p>
+              <p class="fw-bold">Description:</p>
+              <div class="desc-box text-justify">
                 <p>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea
                   illum mollitia quibusdam praesentium eaque repudiandae ut
@@ -171,16 +175,170 @@
                   mollitia obcaecati perferendis cupiditate labore reiciendis.
                 </p>
               </div>
+              <hr />
+              <p><span class="fw-bold">Target:</span> 100.000.000 VNĐ</p>
+              <p><span class="fw-bold">Percentage of shares:</span> 20%</p>
+              <p><span class="fw-bold">Status:</span> Approved Successfully</p>
+              <hr />
+              <div class="feature-box d-flex justify-content-around">
+                <button class="btn btn-primary fw-bold">Update</button>
+                <button class="btn btn-danger fw-bold">Delete</button>
+              </div>
             </div>
-            <!-- Giay to -->
-            <div class="startup-doc-box container-fluid"></div>
+
+            <!-- interact -->
+            <div class="box p-3 mb-3">
+              <div class="d-flex align-items-center">
+                <i class="fas fa-chart-line fa-2x text-info"></i>
+                <div class="ms-3">
+                  <h5 class="mb-1">Lượt tương tác (7 ngày)</h5>
+                  <h3 class="fw-bold" id="totalInteractions">8,920</h3>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Data -->
-          <div class="data-box col-md-6"></div>
+          <div class="data-box col-md-7 mx-auto">
+            <!-- Amout of target and the number of investor -->
+            <div class="target-box box p-3 mb-3">
+              <!-- Target -->
+              <div class="target-box mb-3">
+                <h5 class="h5 fw-bold">Target: 100.000.000 VNĐ</h5>
+                <div class="progress mt-2" style="height: 20px">
+                  <div class="progress-bar" style="width: 50%">
+                    <p class="fw-bold">50%</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- Số startup đăng ký -->
+                <div class="col-md-6">
+                  <div class="card shadow-sm p-2">
+                    <div class="d-flex align-items-center">
+                      <i class="fa-solid fa-handshake fa-2x text-success"></i>
+                      <div class="ms-3">
+                        <h5 class="mb-1">Co-Investors</h5>
+                        <h3 class="fw-bold" id="totalStartups">10</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tổng số tiền đầu tư -->
+                <div class="col-md-6">
+                  <div class="card shadow-sm p-2">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-dollar-sign fa-2x text-warning"></i>
+                      <div class="ms-3">
+                        <h5 class="mb-1">Total investment</h5>
+                        <h3 class="fw-bold" id="totalInvestment">50.000.000</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- danh sach hop dong -->
+            <div class="contact-box box p-3 mb-3">
+              <h4 class="h4 fw-bold">Contracts List</h4>
+              <hr />
+              <section class="doc-list">
+                <div class="row">
+                  <p class="col-md-4 fw-bold">Name</p>
+                  <p class="col-md-3 fw-bold">ID Contact</p>
+                  <p class="col-md-5 fw-bold">Contract Value</p>
+                </div>
+
+                <!-- Thêm bằng vòng lặplặp -->
+                <div
+                  class="doc-item row text-decoration-none align-items-center"
+                >
+                  <p class="col-md-4">Tri11</p>
+                  <p class="col-md-3">1245</p>
+                  <p class="col-md-5">100.000.000</p>
+                </div>
+                <!--  -->
+              </section>
+            </div>
+
+            <!-- Giay to -->
+            <div class="startup-doc-box box container-fluid p-3">
+              <h4 class="h4 fw-bold">Documents List</h4>
+              <hr />
+              <section class="doc-list">
+                <div class="row">
+                  <p class="col-md-7 fw-bold">Name</p>
+                  <p class="col-md-5 fw-bold">Type</p>
+                </div>
+
+                <!-- Thêm bằng vòng lặplặp -->
+                <a
+                  href="#"
+                  class="doc-item row text-decoration-none align-items-center"
+                >
+                  <p class="col-md-7">Báo cáo kinh doanh quý 11</p>
+                  <p class="col-md-5">Financial Report</p>
+                </a>
+                <!--  -->
+              </section>
+            </div>
+          </div>
         </div>
 
         <!-- Investor -->
+        <div class="container mt-4">
+          <h1 class="h1 fw-bold text-center mb-4">Dashboard</h1>
+
+          <div class="row">
+            <!-- Tổng tiền đầu tư -->
+            <div class="col-md-4">
+              <div class="box mb-3 p-3">
+                <h5 class="h5 fw-bold">Total amount invested</h5>
+                <h6 class="h6" id="totalInvestment">0 VNĐ</h6>
+              </div>
+            </div>
+
+            <!-- Tổng lợi nhuận dự kiến -->
+            <div class="col-md-4">
+              <div class="ex-pro-box box p-3 mb-3">
+                <h5 class="h5 fw-bold">Expected profit</h5>
+                <h6 class="h6" id="expectedProfit">0 VNĐ</h6>
+              </div>
+            </div>
+
+            <!-- Biểu đồ tỷ lệ đầu tư -->
+            <div class="col-md-4">
+              <div class="box p-3 mb-3">
+                <h5 class="h5 fw-bold text-center">Investment allocation</h5>
+                <div class="box-body">
+                  <!-- Se ve bieu do tron -->
+                  <canvas id="investmentChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Danh sách khoản đầu tư -->
+          <h3 class="h3 fw-bold mt-4">List of Investments</h3>
+          <table class="table table-striped">
+            <thead class="fw-bold">
+              <tr>
+                <th>Startup</th>
+                <th>Investment amount</th>
+                <th>Investment date</th>
+                <th>Expected return</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="investmentList">
+              <!-- tu them -->
+            </tbody>
+          </table>
+        </div>
+
         <!-- Security -->
 
         <!-- Bank Account -->
