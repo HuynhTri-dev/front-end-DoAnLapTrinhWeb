@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Boostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="../style/layout.css" />
+    <link rel="stylesheet" href="../style/createContact.css" />
+
+    <title>Startup - Risk Chance</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="sticky-top" id="header"></header>
+    <!-- Popup Messenger -->
+    <div id="messenger"></div>
+
+    <main>
+      <div class="row container mt-4 mx-auto">
+        <!-- Ghi noi dung -->
+        <div class="col-md-4">
+          <h2 class="h2 fw-bold text-center">Create Contact</h2>
+          <form id="contractForm" class="mb-4">
+            <div class="mb-3">
+              <label class="form-label:" for="desc-contact"
+                >Content contact</label
+              >
+              <textarea
+                id="desc-contact"
+                class="form-control"
+                placeholder="Content of contact"
+                rows="4"
+                style="max-height: 200px"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="ngayKyKet" class="form-label">Signing Date</label>
+              <input type="date" class="form-control" id="ngayKyKet" />
+            </div>
+            <div class="mb-3">
+              <label for="tongTien" class="form-label">Total Investment</label>
+              <input type="number" class="form-control" id="tongTien" />
+            </div>
+            <div class="mb-3">
+              <label for="phanTramLoiNhuan" class="form-label"
+                >Profit Percentage</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="phanTramLoiNhuan"
+                step="0.01"
+              />
+            </div>
+            <div class="row">
+              <div class="col-md-6 d-flex flex-column gap-2">
+                <button
+                  type="button"
+                  class="btn btn-primary fw-bold"
+                  onclick="generateContract()"
+                >
+                  Create Contract
+                </button>
+
+                <button class="btn btn-success fw-bold" onclick="exportPDF()">
+                  Xuất PDF
+                </button>
+              </div>
+
+              <div
+                class="col-md-6 d-flex justify-content-md-end justify-content-center align-items-start mt-2 mt-md-0"
+              >
+                <button type="button" class="btn btn-primary fw-bold">
+                  Send to Founder
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Tao noi dung -->
+        <div class="col-md-8">
+          <div
+            class="contract-paper"
+            id="contractDisplay"
+            style="display: none"
+          >
+            <!-- DauDau -->
+            <div class="contract-header">
+              CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+            </div>
+            <div class="contract-header">Độc lập - Tự do - Hạnh phúc</div>
+            <div class="contract-header">HỢP ĐỒNG GÓP VỐN</div>
+
+            <ul>
+              <li><p>- Căn cứ bộ luật dân sự 2015</p></li>
+              <li><p>- Căn cứ vào nhu cầu và năng lực của các bên</p></li>
+            </ul>
+            <!-- thanthan -->
+            <p>
+              Hôm nay,
+              <span id="displayNgayKyKet"></span>
+            </p>
+
+            <div class="contract-content">
+              <div id="desc-contact-display" class="contract-desc"></div>
+
+              <p>
+                Tổng Tiền Đầu Tư:
+                <span id="displayTongTien"></span> VNĐ
+              </p>
+              <p>
+                Phần Trăm Lợi Nhuận:
+                <span id="displayPhanTramLoiNhuan"></span>%
+              </p>
+              <!-- Ket -->
+              <div class="d-flex justify-content-around algin-items-end">
+                <div class="mb-5">
+                  <p class="fw-bold">XÁC NHẬN CỦA CÔNG TY</p>
+                </div>
+                <div class="mb-5">
+                  <p class="fw-bold">XÁC NHẬN CỦA NHÀ ĐẦU TƯ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+  </body>
+
+  <!-- JS -->
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../utils/LoadHeaderFooter.js"></script>
+  <script>
+    function generateContract() {
+      let textValue = $("#desc-contact").val();
+      let lines = textValue.split("\n");
+
+      let listHtml = "";
+      lines.forEach((line, index) => {
+        listHtml += `<li>${line}</li>`;
+      });
+
+      $("#desc-contact-display").html(`<ul>${listHtml}</ul>`);
+
+      let rawDate = $("#ngayKyKet").val();
+      let dateObj = new Date(rawDate);
+
+      let formattedDate = `ngày ${dateObj.getDate()} tháng ${
+        dateObj.getMonth() + 1
+      } năm ${dateObj.getFullYear()}`;
+
+      $("#displayNgayKyKet").text(formattedDate);
+      $("#displayTongTien").text($("#tongTien").val());
+      $("#displayPhanTramLoiNhuan").text($("#phanTramLoiNhuan").val());
+      $("#contractDisplay").show();
+    }
+
+    function exportPDF() {
+      const contractElement = document.querySelector("#contractDisplay");
+
+      if (!contractElement || contractElement.offsetHeight === 0) {
+        alert("Lỗi: Không tìm thấy hợp đồng hoặc hợp đồng đang ẩn!");
+        return;
+      }
+
+      // Hiển thị phần tử nếu bị ẩn
+      contractElement.style.display = "block";
+
+      html2canvas(contractElement, { scale: 2 })
+        .then((canvas) => {
+          const imgData = canvas.toDataURL("image/png");
+          const doc = new jsPDF("p", "mm", "a4");
+          const pageWidth = doc.internal.pageSize.getWidth();
+          const pageHeight = doc.internal.pageSize.getHeight();
+
+          // Tính toán kích thước ảnh phù hợp với PDF
+          const imgWidth = pageWidth - 20; // Trừ lề 10mm mỗi bên
+          const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+          // Nếu ảnh cao hơn trang A4, chia nhỏ ảnh thành nhiều trang
+          let yPos = 10; // Vị trí bắt đầu vẽ ảnh
+          if (imgHeight > pageHeight - 20) {
+            let remainingHeight = imgHeight;
+            let sY = 0;
+            while (remainingHeight > 0) {
+              const chunkHeight = Math.min(remainingHeight, pageHeight - 20);
+              const croppedCanvas = document.createElement("canvas");
+              croppedCanvas.width = canvas.width;
+              croppedCanvas.height = (chunkHeight * canvas.width) / imgWidth;
+              const croppedCtx = croppedCanvas.getContext("2d");
+
+              croppedCtx.drawImage(
+                canvas,
+                0,
+                sY,
+                canvas.width,
+                croppedCanvas.height,
+                0,
+                0,
+                canvas.width,
+                croppedCanvas.height
+              );
+
+              const chunkImgData = croppedCanvas.toDataURL("image/png");
+              if (yPos !== 10) doc.addPage();
+              doc.addImage(chunkImgData, "PNG", 10, 10, imgWidth, chunkHeight);
+
+              sY += croppedCanvas.height;
+              remainingHeight -= chunkHeight;
+            }
+          } else {
+            doc.addImage(imgData, "PNG", 10, yPos, imgWidth, imgHeight);
+          }
+
+          doc.save("HopDongDauTu.pdf");
+        })
+        .catch((error) => {
+          console.error("Lỗi khi xuất PDF:", error);
+          alert("Lỗi khi tạo PDF. Vui lòng thử lại!");
+        });
+    }
+  </script>
+</html>

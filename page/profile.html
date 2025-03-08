@@ -76,19 +76,9 @@
                 <button
                   class="btn nav-link d-flex justify-content-center align-items-center"
                 >
-                  <i class="fa-solid fa-shield"></i>
+                  <i class="fa-solid fa-pen"></i>
                   <p style="margin-left: 5px" class="d-none d-md-block">
-                    Security
-                  </p>
-                </button>
-              </li>
-              <li class="nav-item">
-                <button
-                  class="btn nav-link d-flex justify-content-center align-items-center"
-                >
-                  <i class="fa-solid fa-file-invoice-dollar"></i>
-                  <p style="margin-left: 5px" class="d-none d-md-block">
-                    Bank Account
+                    My Post
                   </p>
                 </button>
               </li>
@@ -148,7 +138,7 @@
         <!-- Dashboard -->
         <!-- Founder -->
         <div
-          class="founder-dashboard-container container-fluid mb-4 row mx-auto"
+          class="founder-dashboard-container container-fluid mb-4 row mx-auto mb-3"
         >
           <!-- Startup Information -->
           <div class="startup-box col-md-5 mx-auto">
@@ -196,6 +186,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- Hop dong can xet duyet -->
           </div>
 
           <!-- Data -->
@@ -247,19 +239,51 @@
               <hr />
               <section class="doc-list">
                 <div class="row">
-                  <p class="col-md-4 fw-bold">Name</p>
-                  <p class="col-md-3 fw-bold">ID Contact</p>
-                  <p class="col-md-5 fw-bold">Contract Value</p>
+                  <p class="col-4 fw-bold">Name</p>
+                  <p class="col-3 fw-bold">ID Contact</p>
+                  <p class="col-4 fw-bold">Contract Value</p>
+                  <p class="col-1"></p>
                 </div>
 
                 <!-- Thêm bằng vòng lặplặp -->
-                <div
+                <!-- Nen xanh la da ky -->
+                <!-- Nen do la chua ky -->
+                <!-- nen cam la dang ky -->
+                <a
                   class="doc-item row text-decoration-none align-items-center"
+                  href="../page/contract.html"
                 >
-                  <p class="col-md-4">Tri11</p>
-                  <p class="col-md-3">1245</p>
-                  <p class="col-md-5">100.000.000</p>
-                </div>
+                  <p class="col-4">Tri11</p>
+                  <p class="col-3">1245</p>
+                  <p class="col-4">100.000.000</p>
+                  <div class="col-1">
+                    <div class="success-status"></div>
+                  </div>
+                </a>
+
+                <a
+                  class="doc-item row text-decoration-none align-items-center"
+                  href="#"
+                >
+                  <p class="col-4">Tri11</p>
+                  <p class="col-3">1245</p>
+                  <p class="col-4">100.000.000</p>
+                  <div class="col-1">
+                    <div class="update-status"></div>
+                  </div>
+                </a>
+
+                <a
+                  class="doc-item row text-decoration-none align-items-center"
+                  href="#"
+                >
+                  <p class="col-4">Tri11</p>
+                  <p class="col-3">1245</p>
+                  <p class="col-4">100.000.000</p>
+                  <div class="col-1">
+                    <div class="non-success-status"></div>
+                  </div>
+                </a>
                 <!--  -->
               </section>
             </div>
@@ -269,9 +293,10 @@
               <h4 class="h4 fw-bold">Documents List</h4>
               <hr />
               <section class="doc-list">
-                <div class="row">
-                  <p class="col-md-7 fw-bold">Name</p>
-                  <p class="col-md-5 fw-bold">Type</p>
+                <div class="row fw-bold">
+                  <p class="col-6">Name</p>
+                  <p class="col-5">Type</p>
+                  <p class="col-1"></p>
                 </div>
 
                 <!-- Thêm bằng vòng lặplặp -->
@@ -279,8 +304,11 @@
                   href="#"
                   class="doc-item row text-decoration-none align-items-center"
                 >
-                  <p class="col-md-7">Báo cáo kinh doanh quý 11</p>
-                  <p class="col-md-5">Financial Report</p>
+                  <p class="col-6">Báo cáo kinh doanh quý 11</p>
+                  <p class="col-5">Financial Report</p>
+                  <div class="col-1">
+                    <div class="non-success-status"></div>
+                  </div>
                 </a>
                 <!--  -->
               </section>
@@ -289,7 +317,7 @@
         </div>
 
         <!-- Investor -->
-        <div class="container mt-4">
+        <div class="container mt-4 mb-3">
           <h1 class="h1 fw-bold text-center mb-4">Dashboard</h1>
 
           <div class="row">
@@ -322,21 +350,62 @@
           </div>
 
           <!-- Danh sách khoản đầu tư -->
-          <h3 class="h3 fw-bold mt-4">List of Investments</h3>
-          <table class="table table-striped">
+          <div class="startup-doc-box box container-fluid p-3">
+            <h3 class="h3 fw-bold mt-4">List of Investments</h3>
+            <hr />
+            <section class="doc-list">
+              <div class="row fw-bold">
+                <p class="col-3">Startup</p>
+                <p class="col-3">Investment amount</p>
+                <p class="col-3">Expected return</p>
+                <p class="col-2">Investment date</p>
+                <p class="col-1"></p>
+              </div>
+
+              <!-- Thêm bằng vòng lặplặp -->
+              <a
+                href="#"
+                class="doc-item row text-decoration-none align-items-center"
+              >
+                <p class="col-3">Startup</p>
+                <p class="col-3">Investment amount</p>
+                <p class="col-3">Expected return</p>
+                <p class="col-2">Investment date</p>
+
+                <div class="col-1">
+                  <div class="non-success-status"></div>
+                </div>
+              </a>
+              <!--  -->
+            </section>
+          </div>
+
+          <!-- <table class="table table-hover">
             <thead class="fw-bold">
+              <tr>
+                <th class="text-center">Startup</th>
+                <th class="text-center">Investment amount</th>
+                <th class="text-center">Investment date</th>
+                <th class="text-center">Expected return</th>
+                <th class="text-center">Status</th>
+              </tr>
+            </thead>
+            <tbody id="investmentList">
               <tr>
                 <th>Startup</th>
                 <th>Investment amount</th>
                 <th>Investment date</th>
                 <th>Expected return</th>
-                <th>Status</th>
+                <th class="">
+                  <div
+                    class="d-flex justify-content-center aligin-items-center"
+                  >
+                    <div class="update-status"></div>
+                  </div>
+                </th>
               </tr>
-            </thead>
-            <tbody id="investmentList">
-              <!-- tu them -->
             </tbody>
-          </table>
+          </table> -->
         </div>
 
         <!-- Security -->
@@ -393,6 +462,8 @@
         </div>
       </div>
     </div>
+
+    <footer id="footer"></footer>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../utils/LoadHeaderFooter.js"></script>

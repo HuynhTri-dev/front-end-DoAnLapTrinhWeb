@@ -63,10 +63,32 @@
   height: 40px;
   padding: 5px;
   border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
 }
 
 .doc-item:hover {
   background-color: var(--border-color);
+}
+
+.success-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--success-color);
+}
+
+.update-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--warning-color);
+}
+
+.non-success-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--error-color);
 }
 
 /* Investor */

@@ -74,12 +74,18 @@
             <!-- Nut -->
             <div class="d-flex justify-content-center align-items-center">
               <button
+                data-bs-toggle="modal"
+                data-bs-target="#messengerModal"
                 class="btn btn-primary fw-bold"
                 style="margin-right: 10px"
               >
                 Contact
               </button>
-              <button class="btn btn-success fw-bold">Invest</button>
+              <a
+                href="./createContact.html"
+                class="btn btn-success fw-bold text-white"
+                >Invest</a
+              >
             </div>
           </div>
         </div>
@@ -160,7 +166,6 @@
         </div>
       </div>
     </main>
-
     <!-- Footer -->
     <footer id="footer"></footer>
   </body>
@@ -168,4 +173,22 @@
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../utils/LoadHeaderFooter.js"></script>
+  <script>
+    window.onload = function () {
+      var urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has("id")) {
+        var modal = new bootstrap.Modal(
+          document.getElementById("investmentModal")
+        );
+        modal.show();
+      }
+    };
+
+    $(document).ready(function () {
+      // Kéo thả modal
+      $("#investmentModal .modal-dialog").draggable({
+        handle: ".modal-header",
+      });
+    });
+  </script>
 </html>

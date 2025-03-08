@@ -32,6 +32,10 @@
   --success-color: #28a745;
   --warning-color: #ffc107;
   --error-color: #dc3545;
+
+  --success-bg: #d4edda;
+  --warning-bg: #fff3cd;
+  --error-bg: #f8d7da;
 }
 
 :root {
@@ -72,6 +76,17 @@ a {
 
 .btn-success:hover {
   background-color: var(--secondary-hover);
+}
+
+.btn-warning {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: var(--accent-hover);
+  color: var(--text-light);
 }
 
 .text-justify {
